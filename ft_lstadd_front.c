@@ -6,7 +6,7 @@
 /*   By: qufours <qufours@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 16:02:26 by qufours           #+#    #+#             */
-/*   Updated: 2019/11/08 16:12:19 by qufours          ###   ########.fr       */
+/*   Updated: 2019/11/11 16:31:18 by qufours          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
-	new->next = *alst;
+	if (alst && new)
+	{
+		new->next = *alst;
+		*alst = new;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: qufours <qufours@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 11:53:17 by qufours           #+#    #+#             */
-/*   Updated: 2019/11/06 17:04:03 by qufours          ###   ########.fr       */
+/*   Updated: 2019/11/09 17:22:03 by qufours          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*ptrdst;
 	char	*ptrsrc;
 
 	ptrdst = (char *)dst;
 	ptrsrc = (char *)src;
 	i = 0;
-	while (i < (int)n)
+	if (!dst && !src)
+		return (dst);
+	while (i < n)
 	{
 		ptrdst[i] = ptrsrc[i];
 		i++;

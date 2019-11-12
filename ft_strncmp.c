@@ -6,7 +6,7 @@
 /*   By: qufours <qufours@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:18:00 by qufours           #+#    #+#             */
-/*   Updated: 2019/11/06 16:40:05 by qufours          ###   ########.fr       */
+/*   Updated: 2019/11/09 17:34:33 by qufours          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	int	i;
 
 	i = 0;
-	while (n--)
+	while (n-- && (s1[i] || s2[i]))
 	{
 		if (s1[i] != s2[i])
 			return ((unsigned char)s1[i] - (unsigned char)s2[i]);

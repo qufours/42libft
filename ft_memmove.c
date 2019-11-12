@@ -6,7 +6,7 @@
 /*   By: qufours <qufours@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 15:57:51 by qufours           #+#    #+#             */
-/*   Updated: 2019/11/06 17:05:48 by qufours          ###   ########.fr       */
+/*   Updated: 2019/11/09 17:22:42 by qufours          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = dst;
 	s = (char *)src;
+	if (!dst && !src)
+		return (dst);
 	if (d < s)
 		while (len--)
 			*d++ = *s++;

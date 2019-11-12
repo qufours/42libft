@@ -6,7 +6,7 @@
 /*   By: qufours <qufours@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/08 16:12:59 by qufours           #+#    #+#             */
-/*   Updated: 2019/11/08 16:15:22 by qufours          ###   ########.fr       */
+/*   Updated: 2019/11/09 15:33:22 by qufours          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int		ft_lstsize(t_list *lst)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (lst->next != NULL)
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		i++;
